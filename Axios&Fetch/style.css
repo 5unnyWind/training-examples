@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    transition: all  .3s;
+}
+
+h1 {
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    width:  100vw;
+    text-align: center;
+}
+
+body {
+    background-color: #000;
+    background: url(./bg1.jpg);
+    overflow-x: hidden;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    width: 230px;
+    height: 50px;
+    background: linear-gradient(90deg, #0d1e32, #2f507d, #6283b6, #1a3c62);
+    background-size: 200%;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    /* z-index: 1; */
+
+}
+
+button:nth-child(3) {
+    top: 60%;
+}
+
+button:hover {
+    animation: sun 4s infinite;
+}
+
+button:hover::after {
+    animation: sun 4s infinite;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(90deg, #0d1e32, #2f507d, #6283b6, #1a3c62);
+    background-size: 200%;
+    border-radius: 30px;
+    filter: blur(25px);
+    z-index: -1;
+}
+
+@keyframes sun {
+    100% {
+        background-position: -200% 0;
+    }
+}
